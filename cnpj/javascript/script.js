@@ -1,5 +1,5 @@
-var posicao = new Array(12);
-var posicao2 = new Array(13);
+var posicao = [];
+var posicao2 = [];
 var novoDigito = 0;
 var novoDigito2 = 0;
 
@@ -45,7 +45,7 @@ function buscarPosicao(){
 		novoDigito = 11 - conta;
 	}
 
-	console.log(posicao[12]);
+	console.log(novoDigito);
 }
 
 function buscarPosicao2(){
@@ -72,7 +72,7 @@ function buscarPosicao2(){
 		novoDigito2 = 11 - conta2;
 	}
 
-	console.log(posicao2[13]);
+	console.log(novoDigito2);
 }
 
 function printMensagem(){
@@ -80,6 +80,10 @@ function printMensagem(){
 		if(posicao2[13]==novoDigito2){
 			$('.validou').show();
 			$('.naoValidou').hide();
+		}
+		else{
+			$('.naoValidou').show();
+			$('.validou').hide();
 		}
 	}
 	else{
