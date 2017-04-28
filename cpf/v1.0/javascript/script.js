@@ -21,21 +21,17 @@ function buscarPosicao(){
 	var conta = 0;
 	var multiplicador = 10;
 	posicao = $('.numerosDigitados').val();
-	for(var i = 0; i<posicao.length; i++){
+	for(var i = 0; i<posicao.length-2; i++){
 		conta = conta + (posicao[i]*multiplicador);
 		multiplicador--;
 	}
-	console.log(conta);
 	conta = conta%11;
-
 
 	if(conta<2){
 		novoDigito = 0;
 	}else{
 		novoDigito = 11 - conta;
 	}
-
-	console.log(novoDigito);
 }
 
 function buscarPosicao2(){
@@ -43,7 +39,7 @@ function buscarPosicao2(){
 	var multiplicador = 11;
 	posicao2 = $('.numerosDigitados').val();
 	
-	for(var i = 0; i<posicao2.length; i++){
+	for(var i = 0; i<posicao2.length-1; i++){
 		conta2 = conta2 + (posicao2[i]*multiplicador);
 		multiplicador--;
 	}
