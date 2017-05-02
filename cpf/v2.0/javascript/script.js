@@ -10,6 +10,8 @@ $(document).ready(function(){
 function actions(){
 	$('#conferir').click(function(){
 		buscarPosicao2();
+		buscarPosicao();
+		printMensagem();
 	});
 }
 
@@ -29,7 +31,6 @@ function buscarPosicao(){
 		novoDigito = 11 - conta;
 	}
 
-	buscarPosicao2();
 }
 
 function buscarPosicao2(){
@@ -49,7 +50,6 @@ function buscarPosicao2(){
 		novoDigito2 = 11 - conta2;
 	}
 
-	printMensagem();
 }
 
 function printMensagem(){
